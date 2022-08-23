@@ -21,4 +21,8 @@ describe('Filter Button tests', () => {
         }
       });
   });
+  it('Should return not found if invalid continent is selected', () => {
+    cy.contains('mu').click();
+    cy.contains('No countries found on the selected continent').should('be.visible');
+  });
 });
